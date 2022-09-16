@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --cream:#F3EAE3;
+    --grey: hsl(228, 12%, 48%);
+    --green:hsl(158, 36%, 37%);
+}
+/*mobile first*/
+@media (min-width:300px){
+body{
+    background-color:var(--cream);
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    width:90%;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+}
+figure{
+    width:100%;
+    height:35%;
+    border-radius: 10px 10px 0 0;
+}
+figure .img_mobile {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+ .img_desktop{
+    display: none;
+}
+.text-container{
+    width:100%;
+    height: auto;
+    padding: 1.1rem;
+}
+.text-container h2 {
+    padding-bottom: .8rem;
+    color:var(--grey);
+    font-size: clamp(.8rem, .9rem, 1.3rem);
+}
+.text-container h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size:clamp(1.6rem, 1.8rem, 2rem);
+    padding-bottom: .8rem;
+}
+.text-container article p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color:var(--grey);
+    font-size: 0.875rem;
+    padding-bottom:2rem;
+}
+.prices-container{
+    display: flex;
+    gap:1rem;
+}
+.prices-container p:nth-child(1){
+    color:var(--green);
+    font-size: clamp(1.3rem, 1.7rem, 1.8rem);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+.prices-container p:nth-child(2){
+    align-self: center;
+    text-decoration: line-through;
+
+}
+.button-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    width: 100%;
+    border-radius: 12px;
+    padding:1rem;
+    border: none;
+}
+button p{
+    color: white;
+    padding-left:8px;
+}
+}
+@media (min-width: 600px)
+{
+.main-container{
+    width:70%;
+    height:80%;
+}
+.text-container{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+}
+
+@media (min-width:900px)
+{
+.main-container{
+    width:40%;
+    height: 50%;
+    display: flex;
+}
+figure{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+figure .img_desktop {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+figure .img_mobile{
+     display: none;
+}
+
+.text-container{
+    width:50%;
+    height: 100%;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+button:hover{
+    background-color: rgb(2, 78, 2);
+}
+}
